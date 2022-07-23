@@ -4,6 +4,6 @@ import App from './App'
 
 test('renders correctly', () => {
   render(<App />)
-  const text = screen.getByText(/testing/i)
+  const text = screen.getByText(/branch/i)
   expect(text).toBeInTheDocument()
 });
