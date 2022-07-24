@@ -8,7 +8,7 @@ const mainPage = () => {
             <h1>statistics</h1>
             {todos.map(todo=>
             <li key={todo.id}>
-                <Link href={`/todos/${todo.id}`}><a>{todo.name}</a></Link>
+                <Link href={`/${todo.id}`}><a>{todo.name}</a></Link>
             </li>
             
             )}
