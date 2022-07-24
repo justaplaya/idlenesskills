@@ -8,6 +8,7 @@ const index = () => {
             </Link>
 
             <h1>index.jsx next only</h1>
+            <h2>btw I lost build folder</h2>
         </div>
     )
 }
