@@ -7,4 +7,13 @@ const customJestConfig = {
   testEnvironment: "jest-environment-jsdom",
   testMatch: ['**/tests/*.js?(x)'],
 };
+const jestConfig = {
+  verbose: true,
+  'transform': {
+    '^.+\\.jsx?$': 'babel-jest',
+  },
+  testMatch: ['**/tests/*.js?(x)'],
+}
+
+module.exports = jestConfig
 module.exports = createJestConfig(customJestConfig);
