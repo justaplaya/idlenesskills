@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "test": "jest --watch",
-    "testci": "jest --ci --reporters='default' --reporters='./github-actions-reporter'",
+    "testci": "jest --ci",
     "build": "next build",
     "start": "next start"
   },
