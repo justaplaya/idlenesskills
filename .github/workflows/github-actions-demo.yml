@@ -21,4 +21,4 @@ jobs:
         - name: build project
           run: npm run build
         - name: run tests
-          run: npm run test
+          run: npm run test a
