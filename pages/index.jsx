@@ -2,7 +2,8 @@ import Link from 'next/link'
 import { useState, useEffect } from "react"
 
 const index = ({users}) => {
-    
+   
+     
     return (
         <div>
             <Link href="/statistics">
@@ -21,7 +22,7 @@ const index = ({users}) => {
 }
 
 export default index
-export async function getStaticProps(context) {
+export  async function getStaticProps(context) {
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
     const users = await response.json()
     return {

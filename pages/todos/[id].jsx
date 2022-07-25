@@ -2,6 +2,7 @@ import { useRouter } from "next/router"
 
 
 export default function({user}){
+    
     const {query}  = useRouter()
 
     return(

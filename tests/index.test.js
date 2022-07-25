@@ -2,10 +2,14 @@ import Home from "../pages/index"
 import "@testing-library/jest-dom"
 import { fireEvent, render, screen } from "@testing-library/react"
 
-describe("Calculator", () => {
-    it("renders a calculator", () => {
+describe("index page", () => {
+  
+    it("renders index text", async () => {
       render(<Home />);
-      const text = screen.getByText(/index/i)
-      expect(text).toBeInTheDocument()
+      setTimeout(() => {
+        expect(screen.getByText(/index/i)).toBeInTheDocument()
+      }, 3000);
+      
+      
         });
   });
