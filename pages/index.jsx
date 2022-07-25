@@ -10,9 +10,9 @@ const index = ({users}) => {
             </Link>
 
             <h1>index.jsx next only</h1>
-            {users.map(todo=>
-            <li key={todo.id}>
-                <Link href={`/${todo.id}`}><a>{todo.name}</a></Link>
+            {users.map(user=>
+            <li key={user.id}>
+                <Link href={`/todos/${user.id}`}><a>{user.name}</a></Link>
             </li>
             
             )}
