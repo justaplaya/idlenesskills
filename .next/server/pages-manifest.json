@@ -1,8 +1,9 @@
 {
+  "/[id]": "pages/[id].html",
+  "/": "pages/index.html",
+  "/statistics": "pages/statistics.html",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/statistics": "pages/statistics.js",
-  "/[id]": "pages/[id].js"
+  "/404": "pages/404.html"
 }
