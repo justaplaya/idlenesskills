@@ -1,6 +1,3 @@
-
-
-
 export default function({user}){
     
     return(
@@ -14,6 +11,7 @@ export default function({user}){
 export async function getServerSideProps({params}) {
     const response = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
     const user = await response.json()
+    
     return {
       props: {user}
     }
