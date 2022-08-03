@@ -1,33 +1,32 @@
-import Link from 'next/link'
-import { useState, useEffect } from "react"
+import Page from '../components/Page'
+import { incrementCounter } from '../store/action'
+import {DownloadTodosAction} from '../store/action'
+import { wrapper } from '../store/store'
+import MainPage from '../components/mainPage/mainPage'
 
-const index = ({users}) => {
-   
-     
-    return (
-        <div>
-            <Link href="/statistics">
-                <a>statistics link</a>
-            </Link>
-
-            <h1>index.jsx next only</h1>
-            {users.map(user=>
-                <li key={user.id}>
-                <Link href={`/todos/${user.id}`}><a>{user.name}</a></Link>
-            </li>
-            
-            )}
-        </div>
-    )
+const Index = (props) => {
+  //console.log(props.todos)
+  return <MainPage todos={props.todos}></MainPage>
 }
 
-export default index
+/*export  const getStaticProps =  wrapper.getStaticProps(  (store)=>async ()=> {
+  store.dispatch(DownloadTodosAction())
+})*/
 
+export default Index
+/*export const getStaticProps = wrapper.getStaticProps( (store) => () => {
 
-export  async function getStaticProps(context) {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    const users = await response.json()
-    return {
-      props: {users}
-    }
+  
+})*/
+
+export async function getStaticProps() {
+  const res = await fetch(`http://localhost:5000/todos`)
+  const todos = await res.json()
+  return {
+    props: {todos}
   }
+}
+
+
+
+// return <Page title="Index Page" linkTo="/other" />
