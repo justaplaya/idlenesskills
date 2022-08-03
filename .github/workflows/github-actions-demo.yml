@@ -19,6 +19,7 @@ jobs:
         - name: install modules
           run: npm install
         - name: build project
-          run: npm run build
+          run: CI= npm run build
+          #run: npm run build
         #- name: run tests
         #  run: npm run testci
