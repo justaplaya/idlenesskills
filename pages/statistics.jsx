@@ -1,11 +1,14 @@
 import Link from "next/link"
+import StatisticsPage from '../components/statisticspage/statisticsPage'
+import MainContainer from '../components/mainContainer/mainContainer'
 
-const mainPage = () => {
+const mainPage = ({toggleTheme}) => {
     return (
-        <div>
-            <h1>statistics</h1>
-            
-        </div>
+        <MainContainer toggleTheme={toggleTheme}>
+
+       <StatisticsPage></StatisticsPage>
+       </MainContainer>
+
     )
 }
 
