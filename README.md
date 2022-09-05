@@ -1,8 +1,5 @@
 # IdlenessKills
 ✅Проект Todo-менеджера на стеке React, Next.js, Redux, React Testing Library &amp; Jest, json-server, MUI и chart.js
-# Мотивация и перспективы
-Я создал его для практики своих навыков в данной сфере в качестве личного проекта
-<br>
 # Установка
 git init
 <br>
