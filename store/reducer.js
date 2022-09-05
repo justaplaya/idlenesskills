@@ -1,33 +1,17 @@
 import { createAction, createReducer } from "@reduxjs/toolkit";
-//import { counterActionTypes } from "./action";
-
-
-const DownloadTodos = "DownloadTodos"
-const INCREMENT = "INCREMENT"
-
 
 const initialState = {
-  count: 0,
   todos: []
 };
 
-/*const DownloadTodos = createAction('DownloadTodos')
-
-export default createReducer(initialState,{
-  [DownloadTodos]: function(state){
-    state.todos = action.todos
-  }
-})*/
+const DownloadTodos = "DownloadTodos"
 
 export default function mainReducer(state = initialState, action) {
   switch (action.type) {
-    case INCREMENT:
-      return {...state, count: state.count + 1}
     case DownloadTodos:
-      return { ...state, todos: action.todos };
-    
+      return { ...state, todos: action.todos }
     default:
-      return state;
+      return state
   }
 }
 
